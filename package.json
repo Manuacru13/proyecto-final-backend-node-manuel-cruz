@@ -1,17 +1,19 @@
 {
   "name": "proyecto-final-node",
   "version": "1.0.0",
-  "description":  "API REST para gestión de productos con autenticación y base de datos Firestore, desarrollada con Node.js y Express.js.",
+  "description": "API REST para gestión de productos con autenticación y base de datos Firestore, desarrollada con Node.js y Express.js.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev":"nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "author": "Manuel Antonio Cruz",
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "express": "^5.1.0"
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "firebase": "^12.0.0"
   }
 }
