@@ -1,6 +1,6 @@
 import { db } from "./firebase.js";
 
-import {collection, getDocs} from "firebase/firestore";
+import {collection, getDocs, doc, getDoc} from "firebase/firestore";
 
 const productsCollection = collection(db,"products");
 
@@ -16,4 +16,14 @@ export const getAllProducts = async() => {
     }catch (error){
         console.error(error);
     }
+};
+
+export const getProductById = async (id) => {
+  try {
+    const productRef = doc(productsCollection, id);
+    const snapshot = await getDoc(productRef);
+    return snapshot.exists() ? { id: snapshot.id, ...snapshot.data() } : null;
+  } catch (error) {
+    console.error(error);
+  }
 };

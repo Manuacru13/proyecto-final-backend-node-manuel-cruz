@@ -1,5 +1,9 @@
-import * as Model from "../models/products.model.js";
+import * as model from "../models/products.model.js";
 
 export const getAllProducts = async ()=> {
-    return await Model.getAllProducts()
+    return await model.getAllProducts()
+};
+
+export const getProductById = (id) => {
+  return model.getProductById(id);
 };
