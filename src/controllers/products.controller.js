@@ -1,5 +1,4 @@
-import * as Service from "../services/products.service.js";
-import * as Model from "../models/products.model.js";
+import * as Service from "../services/products.service.js"
 
 export const getAllProducts = async (req,res)=> {
     const products = await Service.getAllProducts();
@@ -9,7 +8,7 @@ export const getAllProducts = async (req,res)=> {
 export const getProductById = async (req, res) => {
   const { id } = req.params;
 
-  const product = await Model.getProductById(id);
+  const product = await Service.getProductById(id);
 
   if (!product) {
     res.status(404).json({ error: "No existe el producto" });

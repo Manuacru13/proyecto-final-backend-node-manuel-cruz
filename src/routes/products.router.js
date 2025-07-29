@@ -3,7 +3,9 @@ const router = Router();
 
 import {getAllProducts, getProductById} from "../controllers/products.controller.js";
 
-router.get("/products",getAllProducts);
-router.get("/products/:id", getProductById);
+import {auth} from "../middlewares/auth.middleware.js";
+
+router.get("/products",auth, getAllProducts);
+router.get("/products/:id",auth, getProductById);
 
 export default router;
