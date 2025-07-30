@@ -20,17 +20,31 @@ export const getProductById = async (req, res) => {
 };
 
 
-export const searchProduct = (req, res) => {
-  const { name } = req.query;
+export const searchProduct = async (req, res) => {
+  try {
+    const { name } = req.query;
 
-  const products = model.getAllProducts();
+    if (!name) {
+      return res.status(400).json({ error: "El parámetro 'name' es requerido" });
+    }
 
-  const filteredProducts = products.filter((p) =>
-    p.name.toLowerCase().includes(name.toLowerCase())
-  );
+    const products = await model.getAllProducts();
 
-  res.json(filteredProducts);
+    if (!Array.isArray(products)) {
+      return res.status(500).json({ error: "Error interno: productos no es un array" });
+    }
+
+    const filteredProducts = products.filter((p) =>
+      p.name.toLowerCase().includes(name.toLowerCase())
+    );
+
+    res.json(filteredProducts);
+  } catch (error) {
+    console.error("Error en searchProduct:", error);
+    res.status(500).json({ error: "Error interno del servidor" });
+  }
 };
+
 
 export const createProduct = async (req, res) => {
   const { name, price, categories } = req.body;

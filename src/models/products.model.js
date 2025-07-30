@@ -22,8 +22,9 @@ export const getAllProducts = async () => {
     }));
     return products;
   } catch (error) {
-    console.error(error);
-  }
+  console.error("Error al obtener productos:", error);
+  return []; 
+}
 };
 
 export const getProductById = async (id) => {
