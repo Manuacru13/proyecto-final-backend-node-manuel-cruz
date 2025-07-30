@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Queso de Cabra Salteño",
+    "price": 800,
+    "categories": ["quesos", "salta", "artesanal"]
+  },
+  {
+    "id": 2,
+    "name": "Queso Tucumano",
+    "price": 700,
+    "categories": ["quesos", "tucuman", "fresco"]
+  },
+  {
+    "id": 3,
+    "name": "Charqui Salteño",
+    "price": 950,
+    "categories": ["fiambres", "salta", "tradicional"]
+  },
+  {
+    "id": 4,
+    "name": "Jamón Artesanal de Jujuy",
+    "price": 1300,
+    "categories": ["fiambres", "jujuy", "artesanal"]
+  },
+  {
+    "id": 5,
+    "name": "Vino Torrontés de Salta",
+    "price": 1600,
+    "categories": ["vinos", "salta", "torrontes"]
+  },
+  {
+    "id": 6,
+    "name": "Vino Malbec de Tucumán",
+    "price": 1500,
+    "categories": ["vinos", "tucuman", "malbec"]
+  },
+  {
+    "id": 7,
+    "name": "Locro Salteño",
+    "price": 900,
+    "categories": ["platos", "salta", "regional"]
+  },
+  {
+    "id": 8,
+    "name": "Empanadas Tucumanas",
+    "price": 600,
+    "categories": ["platos", "tucuman", "regional"]
+  },
+  {
+    "id": 9,
+    "name": "Humita en Chala",
+    "price": 700,
+    "categories": ["platos", "jujuy", "regional"]
+  },
+  {
+    "id": 10,
+    "name": "Mate de Calabaza",
+    "price": 500,
+    "categories": ["mates", "todas", "artesanias"]
+  },
+  {
+    "id": 11,
+    "name": "Tejidos de Lana",
+    "price": 1200,
+    "categories": ["artesanias", "jujuy", "lana"]
+  },
+  {
+    "id": 12,
+    "name": "Cerámica de Catamarca",
+    "price": 1100,
+    "categories": ["artesanias", "catamarca", "ceramica"]
+  }
+]
