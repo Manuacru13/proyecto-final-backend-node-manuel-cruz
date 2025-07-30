@@ -154,5 +154,3 @@ Content-Type: application/json
 - Para desarrollo local, `npm run dev` usa nodemon para recarga automática.
 
 ---
-
-¿Querés ayuda para crear scripts para poblar la base o probar la autenticación? Solo decime.
